@@ -1,4 +1,4 @@
-ARG TAG=1.18-alpine
+ARG TAG=1.20
 FROM golang:${TAG}
 
 # Install build packages
