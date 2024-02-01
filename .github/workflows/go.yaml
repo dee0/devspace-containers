@@ -23,9 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix:
-        include:
-          - tag: 1.20
+ 
     steps:
       - uses: actions/checkout@v2
       - uses: docker/setup-qemu-action@v1
@@ -36,4 +34,4 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - uses: loft-sh/setup-devspace@main
-      - run: devspace build --var TAG=${{ matrix.tag }}
+      - run: devspace build 
