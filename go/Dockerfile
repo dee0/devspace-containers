@@ -1,5 +1,5 @@
-ARG TAG=1.20
-FROM golang:${TAG}
+
+FROM docker.io/golang:1.20
 
 # Install build packages
 RUN apk add --no-cache build-base git || apt-get update && apt-get -y install gcc git; rm -rf /var/lib/apt/lists/*
